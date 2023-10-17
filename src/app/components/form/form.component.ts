@@ -36,11 +36,13 @@ export class FormComponent implements OnInit {
   }
 
   submit(){
-    if(this.transactionForm.invalid){
+    if(this.transactionForm.invalid || this.type.value!=='credit' &&
+    this.type.value!=='debit'){
       return;
     }
     console.log('sent');
     this.onSubmit.emit(this.transactionForm.value);
+    localStorage.setItem('Login', 'Sim');
     location.reload();
   }
 }

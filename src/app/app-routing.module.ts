@@ -6,7 +6,8 @@ import { privateRouteGuard } from './guards/private-route.guard';
 
 const routes: Routes = [
   { path: '', component: FirstComponentComponent },
-  { path: 'form', component: PostFormComponent, canActivate: [privateRouteGuard] }
+  { path: 'form', component: PostFormComponent, 
+  canActivate: [privateRouteGuard] }
 ];
 
 

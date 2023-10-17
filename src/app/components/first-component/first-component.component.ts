@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ListService } from 'src/app/services/list.service';
 
 import { Items } from 'src/app/Items';
+import { FormComponent } from '../form/form.component';
 @Component({
   selector: 'app-first-component',
   templateUrl: './first-component.component.html',
@@ -22,7 +23,7 @@ export class FirstComponentComponent {
     });
     
   }
-
+  
   deleteTest(item: string): void{
     console.log(item);
     this.listService.deleteUser(item).subscribe();
