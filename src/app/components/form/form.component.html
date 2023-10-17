@@ -1,0 +1,15 @@
+<form (ngSubmit)="submit()" [formGroup]="transactionForm" #formDir="ngForm">
+  <input type="text" placeholder="transaction" formControlName="title" required>
+  <div *ngIf="title.invalid && formDir.submitted" class="error">
+    <p>title is necessary!!</p>
+  </div>
+  <input type="text" placeholder="type"  formControlName="type" required>
+  <div *ngIf="type.invalid && formDir.submitted" class="error">
+    <p>type is necessary!</p>
+  </div>
+  <input type="number" placeholder="amount"  formControlName="amount" required>
+  <div *ngIf="amount.invalid && formDir.submitted" class="error">
+    <p>amount is necessary!</p>
+  </div>
+  <input type="submit" value="submit">
+</form>

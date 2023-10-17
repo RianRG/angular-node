@@ -1,0 +1,9 @@
+<p>first-component works!</p>
+<a routerLink="form">akjdkajd</a>
+<app-post-form></app-post-form>
+<ul>
+  <li *ngFor="let item of items">Title: {{ item.title }} || Amount: {{ item.amount }} ||
+    datas: {{ item.id }} | {{ item.created_at | date }}
+    <button (click)="deleteTest(item.id)">delete</button>
+  </li>
+</ul>
